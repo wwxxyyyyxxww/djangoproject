@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <style>
+        .swiper-container {
+    width: 740px;
+    height: 330px;
+}
+    </style>
+
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+ <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+
+        <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
+
+
+
+
+<div class="swiper-container" id="topSwiper">
+    <div class="swiper-wrapper">
+{% for foo in a %}
+         <div class="swiper-slide"><img src="{{ foo.img }}"></div>
+{% endfor %}
+</div>
+{#    <!-- 如果需要分页器 -->#}
+    <div class="swiper-pagination"></div>
+
+</div>
+
+</body>
+</html>
